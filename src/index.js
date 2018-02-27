@@ -2,6 +2,7 @@ module.exports = function getZerosCount(number, base) {
   	var kol_5_5 = 1,
 	    kol = 0,
 	    mass = [],
+	    chislo = [],
 	    sum = 0,
 	    t,
 	    c,
