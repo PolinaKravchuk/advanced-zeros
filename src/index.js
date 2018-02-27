@@ -5,8 +5,9 @@ module.exports = function getZerosCount(number, base) {
 	    chislo = [],
 	    sum = 0,
 	    t,
-	    c,
+	    c = 0,
 	    v,
+	    ost,
 	    num = number;
 
 	while (c != 1){
