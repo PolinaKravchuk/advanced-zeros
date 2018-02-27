@@ -10,7 +10,7 @@ module.exports = function getZerosCount(number, base) {
 	    ost,
 	    num = number;
 
-	while (c != 1){
+	while (c > 10){
 		
 		ost  = num % base;
 		c = num / base - ost;
