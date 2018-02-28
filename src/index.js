@@ -13,17 +13,17 @@ module.exports = function getZerosCount(number, base) {
 	while (c > 1){
 		
 		ost  = num % base;
-		c = num / base - ost;
+		c = num / base;
 			chislo.push(ost);
 	}
 
 	chislo = chislo.reverse()
-	ch = chislo[0];
+	var ch = chislo[0];
 
 	for(var i = 1; i <chislo.length; i++){
 		ch = ch + chislo[i];
 	}
-	var ch = Number(ch);
+	ch = Number(ch);
 	while (kol_5_5 < ch){
 		kol_5_5 = kol_5_5 * 5;
 		mass.push (kol_5_5);
