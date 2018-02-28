@@ -18,11 +18,11 @@ module.exports = function getZerosCount(number, base) {
 	}
 
 	chislo = chislo.reverse()
-	var ch = chislo[0];
+	var ch = chislo.join('');
 
-	for(var i = 1; i <chislo.length; i++){
+	/*for(var i = 1; i <chislo.length; i++){
 		ch = ch + chislo[i];
-	}
+	}*/
 	ch = Number(ch);
 	while (kol_5_5 < ch){
 		kol_5_5 = kol_5_5 * 5;
