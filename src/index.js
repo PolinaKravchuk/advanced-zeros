@@ -1,6 +1,7 @@
 module.exports = function getZerosCount(number, base) {
  var kol_5_5 = 1, mass = [], sum = 0, c = 300, ost, v = "", str = "", t, chislo;
-  while (c >= base){
+   while (true){
+  		if (c < base) break;
 		ost  = number % base;
 		c = (number - ost) / base;
 		v = String(ost);
