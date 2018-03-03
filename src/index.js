@@ -1,18 +1,53 @@
-module.exports = function getZerosCount(number, base) {
- var kol_5_5 = 1, mass = [], sum = 0, c = 300, ost, v = "", str = "", t, chislo;
-   while (true){
-  		if (c < base) break;
-		ost  = number % base;
-		c = (number - ost) / base;
-		v = String(ost);
-		str = v + str;
-	}
+module.exports =
+ function getZerosCount(number, base) {
+  	var kol_5_5 = 1, mass = [], sum = 0,
+  		c = number, ost, v , str = "", t, chislo;
+  		var arr = [];
+  			while (true) {
+  				if (c < base) {
+					console.log(c);
+					break;
+				}
+				ost  = c % base;
+				console.log(ost);
+
+				c = (c - ost) / base;
+				c = Math.floor (c);
+				console.log(c);
+
+				//v = ost.toString();
+				//console.log(v);
+
+				arr.push(ost);
+
+				console.log(str);
+				
+		
+			}
+							
+	//c = c.toString();	 
+	arr.push(c);	
+	console.log(arr);
+	console.log(arr[0]);
+	console.log(arr[3]);
+	/*var tr;
+	tr = str + c;
+	//console.log(typeOf(tr));
+	console.log(tr);
 	
-	str = str + c;
-	console.log(str);
-	str = str.reverse();
-	console.log(str);
-	chislo = Number(str);
+	console.log(arr);*/
+	//tr.reverse();
+	var s = [];
+	arr.reverse();
+	/*for (var i = 0; i < arr.length; i++){
+		s.push(arr[i]);
+		s[i].reverse();
+		console.log(s);
+	}*/
+	tr = arr.join('');
+	console.log(tr);
+
+	chislo = Number(tr);
 	console.log(chislo);
 
 	while (kol_5_5 < chislo){
@@ -27,4 +62,7 @@ module.exports = function getZerosCount(number, base) {
 	}
 
 	return sum;
-}
+} 
+
+//getZerosCount (46899647, 232);
+//console.log(k);
