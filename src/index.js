@@ -1,39 +1,57 @@
-module.exports = function getZerosCount(number, base) {
-  	var kol_5_5 = 1,
-	    kol = 0,
-	    mass = [],
-	    chislo = [],
-	    sum = 0,
-	    t,
-	    c = 10,
-	    v,
-	    ost,
-	    num = number;
+module.exports =
+ function getZerosCount(number, base) {
+  	var kol_5_5 = 1, mass = [], sum = 0,
+  		c = number, ost, v , str = "", t, chislo;
+  		var arr = [];
+  			while (true) {
+  				if (c < base) {
+					break;
+				}
+				ost  = c % base;
 
-	while (c > 1){
+				c = (c - ost) / base;
+				//c = Math.floor (c);
+
+				v = ost.toString();
+
+				arr.push(v);
+				
 		
-		ost  = num % base;
-		c = num / base;
-			chislo.push(ost);
+			}
+							
+	c = c.toString();	 
+	arr.push(c);	
+	arr.reverse();
+
+	var s;
+	
+	for (var i = 0; i < arr.length; i++){
+		s = arr[i];
+		var newstr = '', j;
+	    for (j = s.length - 1; j >= 0; j--) {
+	        newstr += s.charAt(j);
+	    }
+	    arr[i] = newstr;
+		
 	}
 
-	chislo = chislo.reverse()
-	var ch = chislo.join('');
+	tr = arr.join('');
 
-	/*for(var i = 1; i <chislo.length; i++){
-		ch = ch + chislo[i];
-	}*/
-	ch = Number(ch);
-	while (kol_5_5 < ch){
+	chislo = Number(tr);
+
+	while (kol_5_5 < chislo){
 		kol_5_5 = kol_5_5 * 5;
 		mass.push (kol_5_5);
 	}
 
 	for (var i = 0; i < mass.length; i++){
-		t = number / mass[i];
+		t = chislo / mass[i];
 		t = Math.floor (t);
 		sum = sum + t;
 	}
 
 	return sum;
 } 
+
+//getZerosCount (46899647, 232);
+//console.log(k);
