@@ -1,4 +1,50 @@
-module.exports =
+//module.exports =
+ function getZerosCount(number, base) {
+  	var prost = [2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,
+  	89,97,101,103,107,109,113,127,131,137,139,149,151,157,163,167,173,179,181,191,193,197,199,211,223,227,229,233,239,241,251];
+
+  	var delitel = [], 
+  		stepen = [], t;
+  	for (var i = 0; i < prost.length; i++){
+  		if (base % prost[i] == 0){
+  			delitel.push(prost[i]);
+  			base = base / prost[i];
+  		}
+  	}
+  	//console.log(delitel);
+  	for (var i = 0; i < delitel.length; i++) stepen[i] = 0;
+  	for (var i = 2; i <= number; i++){
+  		t = i;
+  		for ( var j = 0; j < delitel.length; j++){
+  			while(t % delitel[j] == 0){
+  				stepen[j]++;
+  				t /= delitel[j];
+  			}
+  		}
+  	}
+  	//console.log(stepen);
+  	var minimalnoe = stepen[0];
+  	for (var i = 1; i < stepen.length; i++){
+  		if (stepen[i] < minimalnoe) minimalnoe = stepen[i];
+  	}
+  	//console.log(minimalnoe);
+  	return minimalnoe;
+} 
+
+//getZerosCount (58123063, 54);
+
+
+
+
+
+
+
+
+
+
+
+
+/*//module.exports =
  function getZerosCount(number, base) {
   	var kol_5_5 = 1, mass = [], sum = 0,
   		c = number, ost, v , str = "", t, chislo;
@@ -53,5 +99,5 @@ module.exports =
 	return sum;
 } 
 
-//getZerosCount (46899647, 232);
-//console.log(k);
+var k = getZerosCount (46899647, 232);
+console.log(k);*/
