@@ -37,6 +37,7 @@ module.exports =
   		if (stepen[i]/stepen_delitel[i] < minimalnoe) minimalnoe = stepen[i]/stepen_delitel[i];
   	}
   	//console.log(Math.floor(minimalnoe));
+  	minimalnoe = Math.floor(minimalnoe);
   	return minimalnoe;
 } 
 
