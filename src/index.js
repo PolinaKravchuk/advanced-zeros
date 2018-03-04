@@ -11,8 +11,9 @@ module.exports =
   			base = base / prost[i];
   		}
   	}
-  	for (var i = 0; i < delitel.length; i++) stepen_delitel[i] = 0;
-  	for (var i = 0; i < delitel.length; i++){
+  	for (var i = 0; i < delitel.length; i++) {
+  		stepen[i] = 0;
+  		stepen_delitel[i] = 0;
   		while (b % delitel[i] == 0){
   			stepen_delitel[i]++;
   			b /= delitel[i];
@@ -20,8 +21,7 @@ module.exports =
   	}
   	//console.log(delitel);
   	//console.log(stepen_delitel);
-  	for (var i = 0; i < delitel.length; i++) stepen[i] = 0;
-  	for (var i = 2; i <= number; i++){
+  	for (var i = 0; i <= number; i++){
   		t = i;
   		for ( var j = 0; j < delitel.length; j++){
   			while(t % delitel[j] == 0){
