@@ -18,6 +18,8 @@ module.exports =
   			b /= delitel[i];
   		}
   	}
+  	//console.log(delitel);
+  	//console.log(stepen_delitel);
   	for (var i = 0; i < delitel.length; i++) stepen[i] = 0;
   	for (var i = 2; i <= number; i++){
   		t = i;
@@ -28,10 +30,13 @@ module.exports =
   			}
   		}
   	}
+  	//console.log(stepen);
   	t = stepen[0]/stepen_delitel[0];
   	var minimalnoe = t;
   	for (var i = 1; i < stepen.length; i++){
   		if (stepen[i]/stepen_delitel[i] < minimalnoe) minimalnoe = stepen[i]/stepen_delitel[i];
   	}
+  	//console.log(Math.floor(minimalnoe));
+  	minimalnoe = Math.floor(minimalnoe);
   	return minimalnoe;
 } 
