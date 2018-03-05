@@ -4,8 +4,7 @@ module.exports =
   	89,97,101,103,107,109,113,127,131,137,139,149,151,157,163,167,173,179,181,191,193,197,199,211,223,227,229,233,239,241,251];
 
   	var delitel = [], stepen_delitel = [],
-<<<<<<< HEAD
-  		stepen = [], t, b = base, n = 0, k;
+	    stepen = [], t, b = base, n = 0, k;
   	var len_prost = prost.length,
   		len_delitel = delitel.length,
   		len_stepen = stepen.length;
