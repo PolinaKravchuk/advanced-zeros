@@ -43,6 +43,8 @@ module.exports =
   	var min = finish[0];
   	for (var i = 0; i<finish.length; i++)
   		if (finish[i] < min) min = finish[i];
+  	
+  	return min;
 }
 
 
